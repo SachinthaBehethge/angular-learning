@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<!-- <input type="text" [(ngModel)]="postTitle"><br><br>
+<button (click)="addNewPost()">Add new post</button>
+@for (post of posts; track $index) {
+<app-post-list-item [post1] = "post"></app-post-list-item>
+}
+
+
+<app-user></app-user>
+<h1>{{message}}</h1> -->
+
+
+<!-- child to parent -->
+
+<app-addpost (postTitleEmiter)="addNewPostFromChild($event)"></app-addpost>
+@for (post of posts; track $index) {
+<app-post-list-item [post1] = "post"></app-post-list-item>
+}

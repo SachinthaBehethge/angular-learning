@@ -1,0 +1,55 @@
+<!-- interpolation -->
+<h2> {{title+3}}</h2>
+
+
+<!-- Property interpolation -->
+ <img [src]="imageUrl" height="300" width="200" alt="image">
+
+
+ <!-- attribute bind -->
+
+  <button [attr.aria-label]="areaLabel">Click Me</button>
+
+
+<!--  -->
+  <table [style.color]="color">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr>
+        <td>Saman</td>
+        <td>25</td>
+    </tr>
+    <tr><td>Susantha Chandramal</td>
+    <td>35</td>
+    </tr>
+    <tr>
+        <td [colSpan]="colspan">Sum of the age of the people : 49</td>
+    </tr>
+  </table>
+
+
+  <!-- class binding -->
+   <p [class.active] = "isActive">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, voluptatibus rerum voluptatum quam temporibus nostrum quod ipsa nihil explicabo sed sapiente officia quos, adipisci quaerat facilis inventore tempore porro vel!</p>
+
+   <!-- event Binding -->
+<button (click)="updateMessage()">Clicke here </button>
+<p>{{message}}</p>
+
+
+<input (keydown)="keyDown($event)"/> <br><br><br><br><br>
+
+<!-- template variable binding -->
+
+<input type="password" #inputref placeholder="Enter Your name"/>
+<br>
+<button (click)="showName(inputref)">show name</button>
+<br>
+<h4>{{name}}</h4>
+
+ <br><br><br><br><br>
+
+<!-- Two way data binding -->
+ <input type="text" [(ngModel)]= "district" placeholder="Enter Your name"/>
+ <h2>youe District is : {{district}}</h2>
